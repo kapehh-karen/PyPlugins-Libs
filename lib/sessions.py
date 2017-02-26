@@ -20,7 +20,7 @@ class PlayerSession:
     @staticmethod
     def clean_sessions():
         players = [str(x.getUniqueId().toString()) for x in Bukkit.getOnlinePlayers()]
-        for k, v in PlayerSession.sessions.iteritems():
+        for k, v in PlayerSession.sessions.items():
             if k not in players:
                 del PlayerSession.sessions[k]
 
